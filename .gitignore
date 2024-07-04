@@ -1,0 +1,11 @@
+bin/
+__pycache__/
+include/
+lib/
+pyvenv.cfg
+Blast.xlsx
+MS.xlsx
+email_format_meta.json
+names.xlsx
+ratio_improver.py
+test_function.py
