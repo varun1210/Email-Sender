@@ -25,11 +25,15 @@ with open("./Blast.xlsx", 'rb') as file:
         company = company.strip()
         option = row['Option']
         designation = row['Designation']
+        if designation == 'NOPE':
+            designation = None
         if type(designation) == str and designation.strip() == '':
             designation = None
         if type(designation) != str:
             desingation = None
         employee_email_id = construct_email_to(option, name, company)
+        if employee_email_id == None:
+            continue
         insert_tuple = (name, company, employee_email_id, designation)
         cursor.execute(insert_query, insert_tuple)
 

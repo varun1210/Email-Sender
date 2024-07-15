@@ -26,13 +26,16 @@ def construct_email_to(option, name, company):
     if(name == 'Varun Muppalla'):
         return "varunm1210@gmail.com"
     
+    if(name == "Andrew Ndukwe"):
+        return "andrew.ndukwe@mastercard.com"
+    
     with open("./email_format_meta.json", "r") as file:
         special_companies = json.load(file)
 
     if('(' in name or ')' in name or "'" in name or '"' in name):
         return None 
     
-    name = name.strip().replace('Dr.', '').replace('dr.', '').replace('MA', '').replace('CERA', '').replace('ASA', '').strip().replace('.', '').replace(',', '').replace('®', '').strip()
+    name = name.strip().replace('á', 'a').replace('é', 'e').replace('è', 'e').replace('CERA', '').replace('CSPO', '').replace('SP', '').replace("Jr.", '').replace("Sr.", '').replace('AIS', '').replace('AU', '').replace('Dr.', '').replace('dr.', '').replace('BCMAS', '').replace('MA', '').replace('CERA', '').replace('ASA', '').strip().replace('.', '').replace(',', '').replace('®', '').strip()
 
     restricted_names = constants.RESTRICTED_NAMES
     restricted_names = sorted(restricted_names, key=len, reverse=True)
@@ -53,7 +56,7 @@ def construct_email_to(option, name, company):
             domain = company_info["domain"]
         company = company_info["company"]
     else:
-        company = company.lower().strip()
+        company = company.replace(' ', '').lower().strip()
     
     first_name = name.split(' ')[0].strip().replace('.', '').replace('®', '')
     last_name = name.split(' ')[-1].strip().replace('.', '').replace('®', '')
@@ -61,10 +64,10 @@ def construct_email_to(option, name, company):
     if(',' in first_name or ',' in last_name or '-' in first_name or '-' in last_name):
         return None
 
-    if(len(last_name) == 1 and option in [1, 2, 6, 7, 8, 11]):
+    if(len(last_name) == 1 and option in [1, 2, 6, 7, 8, 11, 13, 14]):
         return None
     
-    if(len(first_name) == 1 and option in [1, 3, 4, 7, 8, 9, 10]):
+    if(len(first_name) == 1 and option in [1, 3, 4, 7, 8, 9, 10, 14]):
         return None
     
     match option:
@@ -116,10 +119,22 @@ def construct_email_to(option, name, company):
         # mxtell@company.com
         case 12:
             return "{first_inital}x{last_name}@{company}.{domain}".format(first_initial=first_name[0], last_name=last_name, company=company, domain=domain)
+        
+        # tellm@company.com
+        case 13:
+            return "{last_name}{first_initial}@{company}.{domain}".format(last_name=last_name, first_initial=first_name[0], company=company, domain=domain)
+        
+        # tell_max@company.com
+        case 14: 
+            return "{last_name}_{first_name}@{company}.{domain}".format(last_name=last_name, first_name=first_name, company=company, domain=domain)
 
 
 def bulk_send(person_list, user, postgres_details):
-    rate_limiter_count = 0
+    enable_rate_limiter = False
+    if len(person_list) > 30:
+        enable_rate_limiter = True
+        rate_limiter_count = 0
+
     for person in person_list:
         name = person[0].strip()
         first_name = name.split(' ')[0].strip()
@@ -146,25 +161,27 @@ def bulk_send(person_list, user, postgres_details):
             message.attach(part)
         
         try:
-            if(rate_limiter_count > 0 and rate_limiter_count % 30 == 0):
+            if(enable_rate_limiter and rate_limiter_count > 0 and rate_limiter_count % 30 == 0):
                 print("Sent {sent}. Sleeping....".format(sent=rate_limiter_count))
                 time.sleep(30)
 
             server = smtplib.SMTP(smtp_server, smtp_port)
             server.starttls() 
             server.login(email_from, email_password) 
-            sent_in_last_24_hrs = postgres_utils.get_record_count(postgres_details)
+            sent_in_last_24_hrs = postgres_utils.get_record_count(postgres_details, user)
             if (sent_in_last_24_hrs > 490):
                 print("Reached threshold record")
                 break
             server.sendmail(email_from, email_to, message.as_string())
             data_tuple = (name, company, email_to, designation, datetime.datetime.now())
-            postgres_utils.insert_record_to_pg(postgres_details, data_tuple)
+            postgres_utils.insert_record_to_pg(postgres_details, data_tuple, user)
             print("Email sent to: {name}".format(name=name))
-            server.quit() 
-            rate_limiter_count += 1
-        except:
+            server.quit()
+            if enable_rate_limiter:
+                rate_limiter_count += 1
+        except Exception as e:
             print("Email send failed for: {name}".format(name=name))
+            raise e
 
 
 if __name__ == "__main__":
@@ -177,10 +194,9 @@ if __name__ == "__main__":
     postgres_details = application_configs.POSTGRES_CREDENTIALS
     postgres_details["user"] = os.environ.get('EMAIL_SENDER_POSTGRES_USER')
     postgres_details["password"] = os.environ.get('EMAIL_SENDER_POSTGRES_PASSWORD')
+    file_path = "./Blast.xlsx"
 
     if user == 'Varun Muppalla':
-
-        file_path = "./Blast.xlsx"
 
         if mode == "SWE":
             email_subject = constants.SWE_EMAIL_SUBJECT
@@ -204,7 +220,6 @@ if __name__ == "__main__":
         bulk_send(person_list, user, postgres_details)
         
     else:
-        file_path = "./MS.xlsx"
         email_from = os.environ.get('EMAIL_SENDER_EMAIL_MAITRAI')
         email_password = os.environ.get('EMAIL_SENDER_PASSWORD_MAITRAI')
         email_subject = constants.MAITRAI_EMAIL_SUBJECT

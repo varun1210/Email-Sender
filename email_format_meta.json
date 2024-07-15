@@ -1,0 +1,371 @@
+{
+    "Kaleida Health" : {
+        "company" : "kaleidahealth",
+        "domain" : "org"
+    },
+    "Washington Post" : {
+        "company" : "washpost"
+    },
+    "Square" : {
+        "company" : "squareup"
+    },
+    "Neuberger Berman" : {
+        "company" : "nb"
+    },
+    "Ovative Group" : {
+        "company" : "ovative"
+    },
+    "Alloy" : {
+        "company" : "alloy",
+        "domain" : "co"
+    },
+    "Southern Company" : {
+        "company" : "southerncompany"
+    }, 
+    "Dexterity" : {
+        "company" : "dexterity",
+        "domain" : "ai"
+    },
+    "Fetch" : {
+        "company" : "fetchrewards"
+    },
+    "Pure Storage" : {
+        "company" : "purestorage"
+    },
+    "Cox Automotive" : {
+        "company" : "coxautoinc"
+    },
+    "H-E-B" : {
+        "company" : "heb"
+    },
+    "Deutsche Bank" : {
+        "company" : "db"
+    },
+    "Imply" : {
+        "company" : "imply",
+        "domain" : "io"
+    }, 
+    "Fubo" : {
+        "company" : "fubo",
+        "domain" : "tv"
+    },
+    "Nuro" : {
+        "company" : "nuro",
+        "domain" : "ai"
+    },
+    "Booking.com" : {
+        "company" : "booking"
+    },
+    "Verano" : {
+        "company" : "verano",
+        "domain" : "holdings"
+    },
+    "Kin Insurance" : {
+        "company" : "kin"
+    },
+    "Empower" : {
+        "company" : "empower-retirement"
+    }, 
+    "Extreme Networks" : {
+        "company" : "extremenetworks"
+    },
+    "State Street" : {
+        "company" : "statestreet"
+    },
+    "Deluxe" : {
+        "company" : "bydeluxe"
+    },
+    "Rag & Bone" : {
+        "company" : "rag & bone"
+    },
+    "CVS Health" : {
+        "company" : "cvshealth"
+    },
+    "Brooks Running" : {
+        "company" : "brooksrunning"
+    },
+    "Empire State Realty Trust" : {
+        "company" : "empirestaterealtytrust"
+    },
+    "SHI International Corp." : {
+        "company" : "shi"
+    },
+    "Virgin Pulse" : {
+        "company" : "virginpulse"
+    },
+    "Moody's" : {
+        "company" : "moodys"
+    },
+    "Cerity Partners" : {
+        "company" : "ceritypartners"
+    }, 
+    "INSPYR Solutions" : {
+        "company" : "inspyrsolutions"
+    },
+    "OneMain Financial" : {
+        "company" : "onemainfinancial"
+    }, 
+    "Inmar Intelligence" : {
+        "company" : "inmar"
+    }, 
+    "Charles Schwab" : {
+        "company" : "schwab"
+    }, 
+    "Recorded Future" : {
+        "company" : "recordedfuture"
+    }, 
+    "Flynn Group" : {
+        "company" : "flynnrestaurantgroup"
+    }, 
+    "GM Financial" : {
+        "company" : "gmfinancial"
+    },
+    "Confluent" : {
+        "company" : "confluent",
+        "domain" : "io"
+    }, 
+    "Wahl Clipper" : {
+        "company" : "wahlclipper"
+    }, 
+    "Radiology Partners" : {
+        "company" : "radpartners"
+    }, 
+    "State of Franklin Healthcare Associates" : {
+        "company" : "sofha",
+        "domain" : "net"
+    },
+    "Vibrant Emotional Health" : {
+        "company" : "vibrant",
+        "domain" : "org"
+    }, 
+    "Health New England" : {
+        "company" : "healthnewengland",
+        "domain" : "org"
+    },
+    "Lutz" : {
+        "company" : "lutz",
+        "domain" : "us"
+    },
+    "Cambridge Investment Research" : {
+        "company" : "cir2"
+    },
+    "Valley Bank" : {
+        "company" : "valley"
+    }, 
+    "National Veterinary Associates" : {
+        "company" : "viapath"
+    },
+    "David Yurman" : {
+        "company" : "davidyurman"
+    },
+    "Bridgeview" : {
+        "company" : "bridgeviewit"
+    }, 
+    "Capstone Investment Advisors" : {
+        "company" : "capstoneco"
+    },
+    "EDO, Inc." : {
+        "company" : "edo"
+    },
+    "PVH Corp." : {
+        "company" : "pvh"
+    }, 
+    "Sand Cherry" : {
+        "company" : "sandcherryassociates"
+    }, 
+    "StepStone Group" : {
+        "company" : "stepstoneglobal"
+    }, 
+    "Alterra Mountain Company" : {
+        "company" : "alterramtnco"
+    }, 
+    "Shamrock Trading Corporation" : {
+        "company" : "shamrocktradingcorp"
+    }, 
+    "Metropolis" : {
+        "company" : "metropolis",
+        "domain" : "io"
+    },
+    "Potbelly Sandwich Works" : {
+        "company" : "potbelly"
+    },
+    "Zones, LLC" : {
+        "company" : "zones"
+    },
+    "Horizon Media" : {
+        "company" : "horizonmedia"
+    },
+    "Jack Henry" : {
+        "company" : "jackhenry"
+    },
+    "FedEx Dataworks" : {
+        "company" : "fedex"
+    }, 
+    "The Hanover Insurance Group" : {
+        "company" : "hanover"
+    }, 
+    "Janus Henderson Investors" : {
+        "company" : "janushenderson"
+    },
+    "Apex Fintech Solutions" : {
+        "company" : "apexfintechsolutions"
+    },
+    "LTK" : {
+        "company" : "rewardstyle"
+    },
+    "One" : {
+        "company" : "onefinance"
+    }, 
+    "Fisher Investments" : {
+        "company" : "fisherinvestments"
+    },
+    "Thrive Causemetics" : {
+        "company" : "thrivecausemetics"
+    }, 
+    "Elligo Health Research" : {
+        "company" : "elligodirect"
+    }, 
+    "IMC Trading" : {
+        "company" : "imc"
+    },
+    "Prime Therapeutics" : {
+        "company" : "primetherapeutics"
+    },
+    "CareOregon" : {
+        "company" : "careoregon",
+        "domain" : "org"
+    },
+    "Elevance Health" : {
+        "company" : "elevancehealth"
+    },
+    "Hinge" : {
+        "company" : "hinge",
+        "domain" : "co"
+    },
+    "Discovery Education" : {
+        "company" : "discoveryeducation"
+    },
+    "Loop" : {
+        "company" : "loopreturns"
+    }, 
+    "Mizuho" : {
+        "company" : "mizuhocbus"
+    },
+    "JP Morgan" : {
+        "company" : "jpmchase"
+    },
+    "Macquarie Group" : {
+        "company" : "macquarie"
+    },
+    "Ashby" : {
+        "company" : "ashbyhq"
+    }, 
+    "OceanFirst Bank" : {
+        "company" : "oceanfirst"
+    },
+    "Baskin Robbins" : {
+        "company" : "dunkinbrands"
+    }, 
+    "Charles River Associates" : {
+        "company" : "crai"
+    }, 
+    "Tickets For Less" : {
+        "company" : "ticketsforless"
+    },
+    "Moderna" : {
+        "company" : "modernatx"
+    },
+    "hims & hers" : {
+        "company" : "forhims"
+    }, 
+    "Life House" : {
+        "company" : "lifehousehotels"
+    },
+    "Cars.com" : {
+        "company" : "cars",
+        "domain" : "com"
+    },
+    "The Gunter Group" : {
+        "company" : "guntergroupconsulting"
+    },
+    "Concora Credit" : {
+        "company" : "genesis-fs"
+    },
+    "S&P Global" : {
+        "company" : "spglobal"
+    },
+    "Orangetheory Fitness" : {
+        "company" : "orangetheoryfitness"
+    },
+    "Age of Learning" : {
+        "company" : "ageoflearning"
+    },
+    "Liberty Mutual" : {
+        "company" : "libertymutual"
+    },
+    "State Farm" : {
+        "company" : "statefarm"
+    },
+    "PACCAR-Kenworth" : {
+        "company" : "paccar"
+    },
+    "Great American Insurance Group" : {
+        "company" : "gaig"
+    },
+    "OpenStore" : {
+        "company" : "open",
+        "domain" : "store"
+    },
+    "Oak Street Health" : {
+        "company" : "oakstreethealth"
+    },
+    "Tokio Marine HCC" : {
+        "company" : "tmhcc"
+    },
+    "Northern Trust" : {
+        "company" : "ntrs"
+    },
+    "Opto Investments" : {
+        "company" : "optoinvest"
+    },
+    "Guardian Life" : {
+        "company" : "glic"
+    },
+    "Eli Lilly and Company" : {
+        "company" : "lilly"
+    },
+    "Adonis" : {
+        "company" : "adonis",
+        "domain" : "io"
+    },
+    "FirstBank" : {
+        "company" : "efirstbank"
+    },
+    "NewYork-Presbyterian Hospital" : {
+        "company" : "nyp",
+        "domain" : "org"
+    },
+    "Mars" : {
+        "company" : "effem"
+    }, 
+    "Tyson Foods" : {
+        "company" : "tyson"
+    }, 
+    "Discord" : {
+        "company" : "discordapp"
+    },
+    "M&C Saatchi" : {
+        "company" : "mcsaatchi"
+    },
+    "Fathom" : {
+        "company" : "fathomhealth",
+        "domain" : "co"
+    }, 
+    "The Guitar Center Company" : {
+        "company" : "guitarcenter"
+    },
+    "Montefiore Health System" : {
+        "company" : "montefiore",
+        "domain" : "org"
+    }
+}
