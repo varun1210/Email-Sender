@@ -43,6 +43,8 @@ data_negative = [
 data_combos = [
     # ["data", "analy"],
     # ["data", "analy", "senior"],
+    # ["data", "analy", "Sr"],
+    # ["data", "analy", "sr "],
     ["data", "anly", "manager"],
     ["data", "analy", "lead"],
     ["data", "analy", "head"],
@@ -50,6 +52,8 @@ data_combos = [
     ["data", "analy", "director"],
     # ["data", "enginee"],
     # ["data", "enginee", "senior"],
+    # ["data", "enginee", "Sr"],
+    # ["data", "enginee", "sr "],
     ["data", "enginee", "manager"],
     ["data", "enginee", "lead"],
     ["data", "enginee", "head"],
@@ -57,6 +61,8 @@ data_combos = [
     ["data", "enginee", "director"],
     # ["analy", "enginee"],
     # ["analy", "enginee", "senior"],
+    # ["analy", "enginee", "Sr"],
+    # ["analy", "enginee", "sr "],
     ["analy", "enginee", "manager"],
     ["analy", "enginee", "lead"],
     ["analy", "enginee", "head"],
@@ -64,6 +70,8 @@ data_combos = [
     ["analy", "enginee", "director"],
     # ["busin", "intelligence", "enginee"],
     # ["busin", "intelligence", "senior"],
+    # ["busin", "intelligence", "Sr"],
+    # ["busin", "intelligence", "sr "],
     ["busin", "intelligence", "manager"],
     ["busin", "intelligence", "lead"],
     ["busin", "intelligence", "head"],
@@ -80,6 +88,11 @@ data_combos_upper = [
     ["BI", "analy", "head"],
     ["BI", "analy", "principal"],
     ["BI", "analy", "director"],
+    ["BI", "Analy", "Manager"],
+    ["BI", "Analy", "Lead"],
+    ["BI", "Analy", "Head"],
+    ["BI", "Analy", "Principal"],
+    ["BI", "Analy", "Director"],
     # ["BI", "enginee"],
     # ["BI", "enginee", "senior"],
     ["BI", "enginee", "manager"],
@@ -87,6 +100,11 @@ data_combos_upper = [
     ["BI", "enginee", "head"],
     ["BI", "enginee", "principal"],
     ["BI", "enginee", "director"],
+    ["BI", "Enginee", "Manager"],
+    ["BI", "Enginee", "Lead"],
+    ["BI", "Enginee", "Head"],
+    ["BI", "Enginee", "Principal"],
+    ["BI", "Enginee", "Director"],
     # ["ETL", "develop"],
     # ["ETL", "enginee"],
     ["ETL", "manager"],
@@ -94,6 +112,11 @@ data_combos_upper = [
     ["ETL", "head"],
     ["ETL", "principal"],
     ["ETL", "director"],
+    ["ETL", "Manager"],
+    ["ETL", "Lead"],
+    ["ETL", "Head"],
+    ["ETL", "Principal"],
+    ["ETL", "Director"],
 ]
 
 recruiter_combos_negative = [
@@ -199,5 +222,3 @@ except Exception as e:
 finally:
     people_df = pd.DataFrame(people, columns=['Name', 'Designation'])
     people_df.to_excel('./names.xlsx', index=False)
-
-    

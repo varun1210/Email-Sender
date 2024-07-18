@@ -49,7 +49,7 @@ I hope you are doing well!
 My name is Varun Muppalla, and I am a recent Master's in Data Science graduate from the University at Buffalo, SUNY. I am reaching out because I am interested in exploring data engineering and analytics opportunities at {company}.
 
 With over 2 years of experience, I have worked in data-oriented roles at Kaiburr, Yahoo, ZS Associates, and Winspire Technologies, gaining valuable experience in fast-paced startups and large corporate environments.
-I have strong experience in developing data engineering, business intelligence, and data analysis solutions. From a technical standpoint, my expertise includes big data frameworks (Databricks, Apache Airflow, dbt, and Apache Spark) and data visualization tools (Tableau and PowerBI), among others. I am also adept at developing and deploying data-intensive applications on the cloud using AWS and Azure.
+I have strong experience in developing data engineering, business intelligence, and data analysis solutions. From a technical standpoint, my expertise includes big data frameworks (Databricks, Apache Airflow, dbt, Snowflake, and Apache Spark) and data visualization tools (Tableau and PowerBI), among others. I am also adept at developing and deploying data-intensive applications on the cloud using AWS and Azure.
 
 I would greatly appreciate the time to talk to you and discuss how my background and skills may contribute to roles you are looking to fill at {company}. Please find my resume attached for more details.
 
@@ -83,12 +83,15 @@ MAITRAI_RESUME_PATH = '../../../Desktop/Resumes/MSharma_DA_email.pdf'
 
 RESTRICTED_NAMES = [
     'acc',
+    'ains',
     'aipmm',
     'ambci',
     'anp-bc',
+    'apm',
     'arm',
     'asa',
     'atc',
+    'aws',
     'bcmas',
     'bcs',
     'bgs',
@@ -105,6 +108,7 @@ RESTRICTED_NAMES = [
     'cfcm',
     'cfe',
     'cfi',
+    'champ',
     'cia',
     'cimp',
     'cipm',
@@ -113,16 +117,22 @@ RESTRICTED_NAMES = [
     'cism',
     'cissp',
     'cissp',
+    'citam',
+    'clcs',
     'cpa',
+    'cpc',
     'cpcu',
     'cpbi',
     'cpf',
     'cpht',
     'cpm',
+    'cpma',
     'cpp',
     'cra',
     'crcm',
     'crs',
+    'csam',
+    'cscp',
     'csm',
     'cspo',
     'csqe',
@@ -130,7 +140,7 @@ RESTRICTED_NAMES = [
     'cssgb',
     'ctt',
     'dba',
-    # 'dr',
+    'dds',
     'edd',
     'fcas',
     'fia',
@@ -146,8 +156,12 @@ RESTRICTED_NAMES = [
     'lssbb',
     'lssgb',
     'lssyb',
+    'lutcf',
     'maaa',
     'mba',
+    'mca',
+    'mcp',
+    'md',
     'med',
     'meng',
     'mgist',
@@ -155,6 +169,7 @@ RESTRICTED_NAMES = [
     'mhi',
     'mhrm',
     'mims',
+    'mis',
     'mpa',
     'mpaff',
     'mph',
@@ -189,6 +204,5 @@ RESTRICTED_NAMES = [
     'shrm-csp',
     'spc',
     'sphr',
-    # 'sr',
     'ssm'
 ]

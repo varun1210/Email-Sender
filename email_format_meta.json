@@ -367,5 +367,91 @@
     "Montefiore Health System" : {
         "company" : "montefiore",
         "domain" : "org"
+    },
+    "Bank of America" : {
+        "company" : "bofa"
+    },
+    "System One" : {
+        "company" : "systemoneservices"
+    },
+    "Norfolk Southern" : {
+        "company" : "nscorp"
+    },
+    "Pillar4 Media" : {
+        "company" : "pillarfour"
+    },
+    "Palomar" : {
+        "company" : "palomarspecialty"
+    },
+    "Cooper University Health Care" : {
+        "company" : "cooperhealth",
+        "domain" : "edu"
+    },
+    "O'Reilly" : {
+        "company" : "oreilly"
+    },
+    "General Motors" : {
+        "company" : "gm"
+    },
+    "United Airlines" : {
+        "company" : "united"
+    },
+    "ION" : {
+        "company" : "iontrading"
+    },
+    "Jacobs" : {
+        "company" : "jocobs"
+    },
+    "AARP" : {
+        "company" : "aarp",
+        "domain" : "org"
+    },
+    "Mayo Clinic" : {
+        "company" : "mayo",
+        "domain" : "edu"
+    },
+    "Zone & Co" : {
+        "company" : "zoneandco"
+    },
+    "Purpose Financial" : {
+        "company" : "havepurpose"
+    },
+    "Blueprint Technologies" : {
+        "company" : "bpcs"
+    },
+    "Driscoll's" : {
+        "company" : "driscolls"
+    },
+    "A+E Networks" : {
+        "company" : "aenetworks"
+    },
+    "J.D. Power" : {
+        "company" : "jdpower"
+    },
+    "Regions Bank" : {
+        "company" : "regions"
+    },
+    "Otter.ai" : {
+        "company" : "otter",
+        "domain" : "ai"
+    },
+    "American Express" : {
+        "company" : "aexp"
+    },
+    "Ford Credit" : {
+        "company" : "ford"
+    },
+    "J.J. Keller" : {
+        "company" : "jjkeller"
+    },
+    "Clear Street" : {
+        "company" : "clearstreet",
+        "domain" : "io"
+    },
+    "Farmers Insurance" : {
+        "company" : "farmers"
+    },
+    "Crane Co." : {
+        "company" : "craneco"
     }
 }

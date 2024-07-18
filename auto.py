@@ -18,7 +18,7 @@ def initialize_state(file_path):
     person_list = []
     with open(file_path, 'rb') as file:
         names_df = pd.read_excel(file, sheet_name='Sheet1')
-        for index, row in names_df.iterrows():
+        for _, row in names_df.iterrows():
             person_list.append(tuple([row['Name'], row['Company'], row['Option'], row['Designation']]))
     return person_list
 
@@ -35,7 +35,40 @@ def construct_email_to(option, name, company):
     if('(' in name or ')' in name or "'" in name or '"' in name):
         return None 
     
-    name = name.strip().replace('á', 'a').replace('é', 'e').replace('è', 'e').replace('CERA', '').replace('CSPO', '').replace('SP', '').replace("Jr.", '').replace("Sr.", '').replace('AIS', '').replace('AU', '').replace('Dr.', '').replace('dr.', '').replace('BCMAS', '').replace('MA', '').replace('CERA', '').replace('ASA', '').strip().replace('.', '').replace(',', '').replace('®', '').strip()
+    name_cleaner1 = {
+        "á" : "a",
+        "é" : "e",
+        "è" : "e",
+        "SAFe®5" : "",
+        "SAFe" : "",
+        "CERA" : "",
+        "SP" : "",
+        "Jr." : "",
+        "jr." : "",
+        "Sr." : "",
+        "sr." : "",
+        "Dr." : "",
+        "dr." : "",
+        "AIS" : "",
+        "AU" : "",
+        "PMP" : "",
+        "APM" : "",
+        "PM" : "",
+        "MA" : "",
+        "M.A." : "",
+        "m.a." : "",
+        "ASA" : "",
+        "SA" : "",
+        "PO" : "",
+        "." : "",
+        "," : "",
+        "®" : ""
+    }
+    
+    name = name.strip()
+    for item in sorted(name_cleaner1, key=len, reverse=True):
+        if(item in name):
+            name = name.replace(item, name_cleaner1[item]).strip()
 
     restricted_names = constants.RESTRICTED_NAMES
     restricted_names = sorted(restricted_names, key=len, reverse=True)
@@ -127,6 +160,10 @@ def construct_email_to(option, name, company):
         # tell_max@company.com
         case 14: 
             return "{last_name}_{first_name}@{company}.{domain}".format(last_name=last_name, first_name=first_name, company=company, domain=domain)
+        
+        # max-tell@company.com
+        case 15:
+            return "{first_name}-{last_name}@{company}.{domain}".format(first_name=first_name, last_name=last_name, company=company, domain=domain) 
 
 
 def bulk_send(person_list, user, postgres_details):
@@ -227,7 +264,3 @@ if __name__ == "__main__":
         resume_path = constants.MAITRAI_RESUME_PATH
         person_list = initialize_state(file_path)
         bulk_send(person_list, user, postgres_details)
-
-
-
-
