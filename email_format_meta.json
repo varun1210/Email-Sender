@@ -484,5 +484,11 @@
     },
     "Mathematica" : {
         "company" : "mathematica-mpr"
+    },
+    "Comerica Bank" : {
+        "company" : "comerica"
+    },
+    "Kohler Energy" : {
+        "company" : "kohler"
     }
 }

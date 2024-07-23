@@ -164,6 +164,7 @@ RESTRICTED_NAMES = [
     'md',
     'med',
     'meng',
+    'mfa',
     'mgist',
     'mha',
     'mhi',

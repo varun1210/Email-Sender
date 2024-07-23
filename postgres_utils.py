@@ -48,3 +48,29 @@ def get_record_count(postgres_details, user):
     cursor.close()
     conn.close()
     return count
+
+def query_sent(postgres_details, employee_email):
+    conn = psycopg2.connect(
+        dbname=postgres_details["dbname"],
+        user=postgres_details["user"],
+        password=postgres_details["password"],
+        host=postgres_details["host"],
+        port=postgres_details["port"]
+    )
+    cursor = conn.cursor()
+    cursor.execute(
+        '''
+        SELECT count(employee_email_id)
+        FROM mailing_list
+        WHERE employee_email_id = '{employee_email}'
+        '''.format(employee_email=employee_email)
+    )
+    count = cursor.fetchone()[0]
+    cursor.close()
+    conn.close()
+    if count == 0:
+        return False
+    else:
+        return True
+
+

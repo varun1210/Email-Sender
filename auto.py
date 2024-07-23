@@ -191,6 +191,10 @@ def bulk_send(person_list, user, postgres_details):
         email_to = construct_email_to(option, name, company)
         if not email_to:
             continue
+        sent_flag = postgres_utils.query_sent(postgres_details, email_to)
+        if sent_flag:
+            print("Email already sent to: {email}".format(email=email_to))
+            continue
         message = MIMEMultipart()
         message['From'] = formataddr((user, email_from))
         message['To'] = email_to
