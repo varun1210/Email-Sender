@@ -29,6 +29,9 @@ def construct_email_to(option, name, company):
     if(name == "Andrew Ndukwe"):
         return "andrew.ndukwe@mastercard.com"
     
+    if(name == "Michael McAllister" and company == "Expedia"):
+        return "mmcallister@expedia.com"
+    
     with open("./email_format_meta.json", "r") as file:
         special_companies = json.load(file)
 
@@ -40,6 +43,8 @@ def construct_email_to(option, name, company):
         "é" : "e",
         "è" : "e",
         "SAFe®5" : "",
+        "Ed.S" : "",
+        "Ed.S." : "",
         "SAFe" : "",
         "CERA" : "",
         "SP" : "",
@@ -97,10 +102,10 @@ def construct_email_to(option, name, company):
     if(',' in first_name or ',' in last_name or '-' in first_name or '-' in last_name):
         return None
 
-    if(len(last_name) == 1 and option in [1, 2, 6, 7, 8, 11, 13, 14]):
+    if(len(last_name) == 1 and option in [1, 2, 6, 7, 8, 11, 13, 14, 15]):
         return None
     
-    if(len(first_name) == 1 and option in [1, 3, 4, 7, 8, 9, 10, 14]):
+    if(len(first_name) == 1 and option in [1, 3, 4, 7, 8, 9, 10, 14, 15]):
         return None
     
     match option:

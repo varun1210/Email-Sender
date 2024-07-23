@@ -453,5 +453,36 @@
     },
     "Crane Co." : {
         "company" : "craneco"
+    },
+    "SC&H" : {
+        "company" : "schgroup"
+    },
+    "Burlington" : {
+        "company" : "burlingtonstores"
+    },
+    "Recursion" : {
+        "company" : "recursionpharma"
+    },
+    "Integrated DNA Technologies" : {
+        "company" : "idtdna"
+    },
+    "Danaher Corporation" : {
+        "company" : "danaher"
+    },
+    "Education Analytics" : {
+        "company" : "edanalytics",
+        "domain" : "org"
+    },
+    "AMEND Consulting" : {
+        "company" : "amendllc"
+    },
+    "DISH Network" : {
+        "company" : "dish"
+    },
+    "Procter & Gamble" : {
+        "company" : "pg"
+    },
+    "Mathematica" : {
+        "company" : "mathematica-mpr"
     }
 }
