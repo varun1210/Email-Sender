@@ -26,12 +26,6 @@ def construct_email_to(option, name, company):
     if(name == 'Varun Muppalla'):
         return "varunm1210@gmail.com"
     
-    if(name == "Andrew Ndukwe"):
-        return "andrew.ndukwe@mastercard.com"
-    
-    if(name == "Michael McAllister" and company == "Expedia"):
-        return "mmcallister@expedia.com"
-    
     with open("./email_format_meta.json", "r") as file:
         special_companies = json.load(file)
 
@@ -47,6 +41,12 @@ def construct_email_to(option, name, company):
         "Ed.S." : "",
         "SAFe" : "",
         "CERA" : "",
+        "CSPO" : "",
+        "PSPO" : "",
+        "SPC" : "",
+        "SPHR" : "",
+        "SHRM-CSP" : "",
+        "AIPMM" : "",
         "SP" : "",
         "Jr." : "",
         "jr." : "",
@@ -56,14 +56,28 @@ def construct_email_to(option, name, company):
         "dr." : "",
         "AIS" : "",
         "AU" : "",
+        "SCPM" : "",
+        "CPMA" : "",
+        "POPM" : "",
+        "CIPM" : "",
+        "CPM" : "",
         "PMP" : "",
         "APM" : "",
         "PM" : "",
+        "BCMAS" : "",
+        "CPMA" : "",
+        "MAAA" : "",
+        "CISA" : "",
+        "CSAM" : "",
+        "FSA" : "",
         "MA" : "",
         "M.A." : "",
         "m.a." : "",
         "ASA" : "",
         "SA" : "",
+        "CSPO" : "",
+        "PSPO" : "",
+        "POPM" : "",
         "PO" : "",
         "." : "",
         "," : "",

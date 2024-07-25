@@ -2,7 +2,7 @@ from lxml import etree
 import pandas as pd
 import application_configs
 
-html_file_path = './(13) Mayne Pharma_ People _ LinkedIn.html'
+html_file_path = './(1) Two Six Technologies_ People _ LinkedIn.html'
 with open(html_file_path, 'r', encoding='utf-8') as file:
     html_content = file.read()
 
@@ -77,7 +77,7 @@ data_combos = [
     ["busin", "intelligence", "head"],
     ["busin", "intelligence", "principal"],
     ["busin", "intelligence", "director"],
-    ["data"],
+    # ["data"],
 ]
 
 data_combos_upper = [
