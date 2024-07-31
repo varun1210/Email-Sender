@@ -2,7 +2,7 @@ from lxml import etree
 import pandas as pd
 import application_configs
 
-html_file_path = './(1) Two Six Technologies_ People _ LinkedIn.html'
+html_file_path = './(7) City Bank_ People _ LinkedIn.html'
 with open(html_file_path, 'r', encoding='utf-8') as file:
     html_content = file.read()
 
@@ -42,10 +42,10 @@ data_negative = [
 
 data_combos = [
     # ["data", "analy"],
-    # ["data", "analy", "senior"],
+    ["data", "analy", "senior"],
     # ["data", "analy", "Sr"],
     # ["data", "analy", "sr "],
-    ["data", "anly", "manager"],
+    ["data", "analy", "manager"],
     ["data", "analy", "lead"],
     ["data", "analy", "head"],
     ["data", "analy", "principal"],
@@ -77,7 +77,8 @@ data_combos = [
     ["busin", "intelligence", "head"],
     ["busin", "intelligence", "principal"],
     ["busin", "intelligence", "director"],
-    # ["data"],
+    ["data"],
+    # ["data", "manager"],
 ]
 
 data_combos_upper = [
@@ -171,8 +172,8 @@ try:
     people = []
     fail_count = 0
     while True:
-        name_xpath = "/html/body/div[4]/div[3]/div/div[2]/div/div[2]/main/div[2]/div/div[2]/div/div[1]/ul/li[{counter}]/div/section/div/div/div[2]/div[1]/a/div".format(counter=counter)
-        designation_xpath = "/html/body/div[4]/div[3]/div/div[2]/div/div[2]/main/div[2]/div/div[2]/div/div[1]/ul/li[{counter}]/div/section/div/div/div[2]/div[3]/div/div".format(counter=counter)
+        name_xpath = "/html/body/div[4]/div[3]/div/div[2]/div/div[2]/main/div[2]/div/div[2]/div/div[1]/ul/li[{c}]/div/section/div/div/div[2]/div[1]/a/div".format(c=counter)
+        designation_xpath = "/html/body/div[4]/div[3]/div/div[2]/div/div[2]/main/div[2]/div/div[2]/div/div[1]/ul/li[{c}]/div/section/div/div/div[2]/div[3]/div/div".format(c=counter)
         name_elements = tree.xpath(name_xpath)
         designation_elements = tree.xpath(designation_xpath)
         if not name_elements:
@@ -202,7 +203,11 @@ try:
             if(lower):
                 text = text.lower()
             for combo in combos:
-                if all(word in text for word in combo):
+                found_count = 0
+                for word in combo:
+                    if word in text:
+                        found_count += 1
+                if found_count == len(combo):
                     return True
             return False
         
@@ -211,7 +216,7 @@ try:
                 people.append(tuple([name_text_content, designation_text_content]))
         else:
             if mode == "DE":
-                if (contains_word_combos(designation_text_content, data_combos, True) or contains_word_combos(designation_text_content, data_combos_upper, False)) and not contains_word_combos(designation_text_content, general_negative, True) and not contains_word_combos(designation_text_content, data_negative, True):
+                if (contains_word_combos(designation_text_content, data_combos, True) or contains_word_combos(designation_text_content, data_combos_upper, False)) and (not contains_word_combos(designation_text_content, general_negative, True)) and (not contains_word_combos(designation_text_content, data_negative, True)):
                     people.append(tuple([name_text_content, designation_text_content]))
             else:
                 if contains_word_combos(designation_text_content, swe_combos, True) and not contains_word_combos(designation_text_content, general_negative, True) and not contains_word_combos(designation_text_content, swe_negative, True):

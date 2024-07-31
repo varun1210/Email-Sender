@@ -60,10 +60,16 @@ def query_sent(postgres_details, employee_email):
     cursor = conn.cursor()
     cursor.execute(
         '''
-        SELECT count(employee_email_id)
+        SELECT count(employee_email_id) FROM (
+        SELECT employee_email_id
         FROM mailing_list
         WHERE employee_email_id = '{employee_email}'
-        '''.format(employee_email=employee_email)
+        UNION
+        SELECT employee_email_id
+        FROM sent
+        WHERE employee_email_id = '{employee_email}'
+        ) a
+       '''.format(employee_email=employee_email)
     )
     count = cursor.fetchone()[0]
     cursor.close()

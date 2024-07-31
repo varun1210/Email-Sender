@@ -490,5 +490,46 @@
     },
     "Kohler Energy" : {
         "company" : "kohler"
+    },
+    "Georgia Pacific" : {
+        "company" : "gapac"
+    },
+    "Cornerstone Advisors" : {
+        "company" : "crnrstone"
+    }, 
+    "Old National Bank" : {
+        "company" : "oldnational"
+    },
+    "Noblis" : {
+        "company" : "noblis",
+        "domain" : "org"
+    },
+    "ICF" : {
+        "company" : "icfi"
+    },
+    "CIAS" : {
+        "company" : "caisgroup"
+    }, 
+    "PGIM" : {
+        "company" : "prudential"
+    }, 
+    "Safe-Guard Products" : {
+        "company" : "safe-guardproducts"
+    },
+    "Kubota Tractor Corp" : {
+        "company" : "kubotausa"
+    },
+    "Synthego Corporation" : {
+        "company" : "synthego"
+    },
+    "Crusoe" : {
+        "company" : "crusoeenergy"
+    },
+    "Bilby" : {
+        "company" : "bilby",
+        "domain" : "ai"
+    },
+    "City Bank" : {
+        "company" : "citybanktexas"
     }
 }
