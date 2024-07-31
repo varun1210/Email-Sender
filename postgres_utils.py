@@ -40,9 +40,9 @@ def get_record_count(postgres_details, user):
         cursor.execute(
             '''
             SELECT count(*) 
-            FROM sent_maitrai
+            FROM sent_{user}
             WHERE time_sent is NOT NULL and time_sent >= (CURRENT_TIMESTAMP - INTERVAL '1 day');
-            '''
+            '''.format(user=user.split(' ')[0].lower())
         )
     count = cursor.fetchone()[0]
     cursor.close()
