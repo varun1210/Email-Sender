@@ -59,28 +59,6 @@ Best,
 Varun Muppalla
 '''
 
-MAITRAI_EMAIL_SUBJECT = "Seeking opportunities in data in healthcare at {company}"
-
-MAITRAI_EMAIL_BODY = '''Hi {first_name},
-
-I hope you are doing well!
-
-My name is Maitrai Sharma, I am a senior healthcare technology professional working primarily in data analytics and engineering. I am reaching out since I am interested in exploring data analytics and engineering opportunities in your team.
-
-I have extensive experience in data analysis, data engineering, and healthcare data, with proficiency in data warehousing, ETL pipelines and data modelling. From a technical standpoint, I have developed big data analytics applications using tools and technologies such as Snowflake, Databricks, Tableau, PowerBI, and AWS.
-
-My professional background includes roles at Kaleida Health and Oracle Cerner Corporation, where I developed data-oriented solutions in healthcare and created a strong impact for stakeholders.
-
-I would greatly appreciate the time to talk to you and discuss how my background and skills may contribute to the success of your team at {company}. Please find my resume attached for more details.
-
-Thanks!
-
-Best,
-Maitrai Sharma
-'''
-
-MAITRAI_RESUME_PATH = '../../../Desktop/Resumes/MSharma_DA_email.pdf'
-
 RESTRICTED_NAMES = [
     'acc',
     'ains',

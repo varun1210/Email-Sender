@@ -5,7 +5,7 @@ MODE = "DE"
 RECRUITER_MODE = False
 
 USER = "Varun Muppalla"
-# USER = "Maitrai Sharma"
+# Add your name
 
 
 POSTGRES_CREDENTIALS = {

@@ -284,10 +284,9 @@ if __name__ == "__main__":
         bulk_send(person_list, user, postgres_details)
         
     else:
-        email_from = os.environ.get('EMAIL_SENDER_EMAIL_MAITRAI')
-        email_password = os.environ.get('EMAIL_SENDER_PASSWORD_MAITRAI')
-        email_subject = constants.MAITRAI_EMAIL_SUBJECT
-        email_body = constants.MAITRAI_EMAIL_BODY
-        resume_path = constants.MAITRAI_RESUME_PATH
-        person_list = initialize_state(file_path)
-        bulk_send(person_list, user, postgres_details)
+        # Add your email credentails to the environment variables
+        # Add file path to your resume to constants file
+        # Create Blast Sheet
+        # Add your email subject and body to constants file
+        # Initialize state and call bulk send
+        pass
